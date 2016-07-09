@@ -29,13 +29,7 @@
 
 
   <style type="text/css">
-  .log {
-    color: red;
-  }
-  body {
-    background-color: red;
-  }
-  
+
   </style>
 
   <title>whatisyoufirstnamelastnameandage</title>
@@ -54,6 +48,7 @@ window.onload=function(){
   }
   var old = console.log;
   var logger = document.getElementById('log');
+  log.style.color = "red";
   console.log = function(message) {
     if (typeof message == 'object') {
       logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';
